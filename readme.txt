@@ -3,11 +3,11 @@ address book application with laravel
 
 with laravel paging, member management, database management, customized error and validation examples like
 
-Tutorials
-pagination 
-user management
-database seed
-customize error and validation
+laravel Tutorials
+laravel pagination 
+laravel user management
+laravel database seed
+laravel customize error and validation
 
 admin:
 selmantunc@gmail.com
