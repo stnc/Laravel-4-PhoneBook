@@ -9,8 +9,9 @@ laravel user management
 laravel database seed
 laravel customize error and validation
 
-admin:
-selmantunc@gmail.com
+
+Installion : composer update 
+email:selmantunc@gmail.com
 password:12345
 
 Thanks to theme 
@@ -25,4 +26,3 @@ laravelde sayfalama
 database seed
 özelleştirilmiş hatalar ve doğrulama uyarıları gibi 
 laravel hakkında bir çok şeyi öğrenebileceğiniz bir uygulama oldu.
-
