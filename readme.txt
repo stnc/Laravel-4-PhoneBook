@@ -15,3 +15,14 @@ password:12345
 
 Thanks to theme 
 https://github.com/almasaeed2010/AdminLTE
+
+
+
+Laravel ile geliştirdiğim telefon defteri uygulaması 
+
+laravelde sayfalama 
+üye yönetimi
+database seed
+özelleştirilmiş hatalar ve doğrulama uyarıları gibi 
+laravel hakkında bir çok şeyi öğrenebileceğiniz bir uygulama oldu.
+
