@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php echo $__env->make('partials/head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+</head>
+
+<body class="skin-blue">
+
+<?php echo $__env->make('partials/header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="left-side sidebar-offcanvas">
+    <?php echo $__env->make('partials/sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</aside>
+
+
+<div class="wrapper row-offcanvas row-offcanvas-left">
+    <!-- Left side column. contains the logo and sidebar -->
+    <!-- Right side column. Contains the navbar and content of the page -->
+    <aside class="right-side">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+
+              LaRaVeL 
+                <small>PhoneBook Example </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Widgets</li>
+            </ol>
+        </section>
+
+
+        <?php echo $__env->yieldContent('content_stnc'); ?>
+
+    </aside>
+    <!-- /.right-side -->
+
+
+</div>
+<!-- ./wrapper -->
+
+
+<?php echo $__env->make('partials/scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+</body>
+</html>

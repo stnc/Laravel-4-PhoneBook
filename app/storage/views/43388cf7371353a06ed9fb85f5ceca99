@@ -1,0 +1,107 @@
+<?php $__env->startSection('content_stnc'); ?>
+
+<!-- Main content -->
+<section class="content">
+    <!-- MAILBOX BEGIN -->
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="box box-primary">
+                <div class="box-header">
+                    <i class="fa fa-inbox"></i>
+
+                    <h3 class="box-title">Edit Adress </h3>
+                </div>
+
+
+           	<?php echo Form::model($phonebook, array('method' => 'PATCH', 'route' => array('phonebook.update', $phonebook->id))); ?>
+
+			
+		
+                <?php if($errors->any()): ?>
+                <div class="alert alert-danger alert-dismissable">
+                    <i class="fa fa-ban"></i>
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                    <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+                </div>
+                <?php endif; ?>
+                    <div class="box-body">
+
+
+                        <div class="form-group <?php if($errors->has('name')): ?> has-error <?php endif; ?>">
+                            <label for="name">Name</label>
+                     
+							
+							<?php echo Form::text('name', Input::old('name'), array('class' => 'form-control', 'placeholder' => 'Please insert your name here...')); ?>
+
+							
+                            <?php if($errors->has('name')): ?> <p class="help-block"><?php echo $errors->first('name'); ?></p> <?php endif; ?>
+                        </div>
+
+
+
+                        <div class="form-group <?php if($errors->has('lastname')): ?> has-error <?php endif; ?>">
+                            <label for="lastname">Last Name</label>
+                        <?php echo Form::text('lastname', Input::old('lastname'), array('class' => 'form-control')); ?>
+
+                            <?php if($errors->has('name')): ?> <p class="help-block"><?php echo $errors->first('lastname'); ?></p> <?php endif; ?>
+                        </div>
+
+
+
+                        <div class="form-group <?php if($errors->has('phone')): ?> has-error <?php endif; ?>">
+                            <label for="phone">Phone :</label>
+                        
+							      <?php echo Form::text('phone', Input::old('phone'), array('class' => 'form-control')); ?>
+
+                            <?php if($errors->has('phone')): ?> <p class="help-block"><?php echo $errors->first('phone'); ?></p> <?php endif; ?>
+                        </div>
+
+
+
+
+                        <div class="form-group <?php if($errors->has('email')): ?> has-error <?php endif; ?>">
+                            <label for="email">Email</label>
+                          
+							      <?php echo Form::text('email', Input::old('email'), array('class' => 'form-control','placeholder' => 'john@example.com')); ?>
+
+                            <?php if($errors->has('email')): ?> <p class="help-block"><?php echo $errors->first('email'); ?></p> <?php endif; ?>
+                        </div>
+
+                        <div class="form-group <?php if($errors->has('notes')): ?> has-error <?php endif; ?>">
+                        <label for="notes">Notes</label>
+									  	<?php echo Form::textarea('notes', Input::old('notes'), array('rows' => '3','class'=>'form-control')); ?>	
+                            <?php if($errors->has('notes')): ?> <p class="help-block"><?php echo $errors->first('notes'); ?></p> <?php endif; ?>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer clearfix">
+
+
+
+                        <button type="submit" class="btn btn-primary pull-left"><i class="fa fa-envelope"></i> Add
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+            <!---end box box-primary ->
+
+                                   <!--stnc son -->
+
+
+        </div>
+
+
+    </div>
+</section>
+<?php $__env->stopSection(); ?>
+
+
+
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
