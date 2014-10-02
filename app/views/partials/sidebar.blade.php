@@ -33,7 +33,7 @@
 						 <li><a href="/category"><i class="fa fa-angle-double-right"></i>
                         Category List</a></li>
 						
-						    <li><a href="/category/crate"><i class="fa fa-angle-double-right"></i>
+						    <li><a href="/category/create"><i class="fa fa-angle-double-right"></i>
                         Category Add</a></li>
 						
                 <li><a href="/logout"><i class="fa fa-angle-double-right"></i>
