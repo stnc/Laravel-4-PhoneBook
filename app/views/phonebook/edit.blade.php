@@ -85,7 +85,7 @@
                 </form>
 
             </div>
-            <!---end box box-primary ->
+            <!---end box box-primary -->
 
                                    <!--stnc son -->
 

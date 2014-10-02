@@ -1,4 +1,8 @@
-
+/*
+SQLyog Ultimate v9.50 
+MySQL - 5.6.15-log : Database - adressbook
+*********************************************************************
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -22,11 +26,11 @@ CREATE TABLE `category_adresses` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `category_adresses` */
 
-insert  into `category_adresses`(`id`,`name`,`created_at`,`updated_at`) values (1,'Office','2014-09-29 14:04:09','0000-00-00 00:00:00'),(2,'Friends','2014-09-29 14:04:14','0000-00-00 00:00:00'),(3,'Family','0000-00-00 00:00:00','0000-00-00 00:00:00');
+insert  into `category_adresses`(`id`,`name`,`created_at`,`updated_at`) values (1,'Office','2014-09-29 14:04:09','0000-00-00 00:00:00'),(2,'Friends','2014-09-29 14:04:14','2014-10-02 21:48:25'),(3,'Family','0000-00-00 00:00:00','0000-00-00 00:00:00');
 
 /*Table structure for table `migrations` */
 
@@ -63,7 +67,7 @@ CREATE TABLE `phonebooks` (
 
 /*Data for the table `phonebooks` */
 
-insert  into `phonebooks`(`id`,`user_id`,`category_id`,`name`,`lastname`,`phone`,`email`,`notes`,`published`,`created_at`,`updated_at`) values (2,1,1,'john','carter','0212 255 25 25','jon@gmail.com','dsds',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(3,NULL,2,'hakan','ayek',NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(4,NULL,2,'hasan',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(8,NULL,2,'ali',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(9,NULL,3,'veli',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(10,NULL,3,'deli',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(11,NULL,1,'kupeli',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(12,NULL,1,'niami',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(13,NULL,1,'niyami',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(15,NULL,2,'jolie',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(16,NULL,2,'2',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(17,NULL,3,'roni',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(18,NULL,1,'many',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(19,NULL,2,'2',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(20,NULL,3,'kırk',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(22,NULL,2,'elli',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(23,NULL,3,'2',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(24,NULL,1,'carter',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(25,NULL,2,'d',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(26,NULL,NULL,'d',NULL,NULL,NULL,NULL,NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(27,NULL,NULL,'d',NULL,NULL,NULL,NULL,NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(28,NULL,NULL,'d',NULL,NULL,NULL,NULL,NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(30,NULL,NULL,'okul',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(31,NULL,NULL,'universty',NULL,NULL,NULL,NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(32,NULL,3,NULL,NULL,NULL,NULL,NULL,NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(33,1,NULL,'selman','tunç','32323232','selmantunc@gmail1.com',NULL,1,'2014-10-01 16:20:21','2014-10-01 16:20:21'),(34,1,NULL,'selman','tunç','32323232','selmantunc@gmail15.com',NULL,1,'2014-10-01 16:21:01','2014-10-01 16:21:01'),(35,1,NULL,'fsf','dsdf','54545','sdsd@gg.coms',NULL,1,'2014-10-01 16:21:50','2014-10-01 16:21:50'),(36,1,NULL,'fsf','dsdf','54545','sdsd@gg2.com',NULL,1,'2014-10-01 16:22:29','2014-10-01 16:22:29'),(37,1,NULL,'dsd','sdd','3434343','sddsd@gg.coms',NULL,1,'2014-10-01 16:24:15','2014-10-01 16:24:15');
+insert  into `phonebooks`(`id`,`user_id`,`category_id`,`name`,`lastname`,`phone`,`email`,`notes`,`published`,`created_at`,`updated_at`) values (2,1,1,'john','carter','0212 255 25 25','jon@gmail.com','dsds',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(3,1,2,'hakan','ayek','021545266','h@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(4,1,2,'hasan','koca','02154929659','h2@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(8,1,2,'ali','komurcu','0354453535345','a@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(9,1,3,'veli','tutsak','02342343','v@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(10,1,3,'deli','kupeli','0423423434','d@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(11,1,1,'kupeli','deli','042342342','k@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(12,1,1,'niami','camp','076576575','n@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(13,1,1,'niyami','carol','0345345346','ny@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(15,1,2,'jolie','anjeli','0867867','ja@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(16,1,2,'tufan','yıldurım','06464576746','ty@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(17,1,3,'roni','coxx','00786767','rc@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(18,1,1,'many','has','024656465','mb@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(19,1,2,'kirk','douglas','05465489','dsds@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(20,1,3,'fifty','cent','0894656546','fr@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(22,1,2,'brad','pitt','089894615','ew@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(23,1,3,'manuel','terca','06564646','bc@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(24,1,1,'carter','backman','0949664','ss@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(25,1,2,'dila','nova','684949','dsdsd@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(26,1,1,'john','olivia','089549919','jo@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(27,1,1,'jacket','defak','2844898984','ja@gmail.com',NULL,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),(33,1,NULL,'selman','tunç','32323232','selmantunc@gmail1.com',NULL,1,'2014-10-01 16:20:21','2014-10-01 16:20:21'),(34,1,NULL,'selman','tunç','32323232','selmantunc@gmail15.com',NULL,1,'2014-10-01 16:21:01','2014-10-01 16:21:01');
 
 /*Table structure for table `users` */
 
@@ -81,7 +85,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_username_unique` (`username`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `users` */
 

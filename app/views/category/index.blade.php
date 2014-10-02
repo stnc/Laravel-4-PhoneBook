@@ -17,64 +17,35 @@
                                 <i class="fa fa-inbox"></i>
 
                                 <h3 class="box-title">Adress BOOK</h3>
+								
+									
                             </div>
                             <!-- compose message btn -->
-                            <a class="btn btn-block btn-primary" href="/phonebook/create"><i
-                                    class="fa fa-pencil"></i> Add</a>
+          
 
-                            <!-- Navigation - folders-->
-                            <div style="margin-top: 15px;">
-                                <ul class="nav nav-pills nav-stacked">
-                                    <li class="header">Category (  {{ $AdressCat->count() }}  ) </li>
-                                    <li><a href="/phonebook"><i class="fa fa-inbox"></i> ALL </a></li>
-                                    @if($AdressCat->count())
-                                    @foreach($AdressCat as $cat)
-                                    <li><a href="/phonebook/cat/{{  $cat->id }}"><i class="fa fa-inbox"></i> {{  $cat->name }} </a></li>
-                                    @endforeach
-                                    @else
-                                    <h4>no results</h4>
-                                    @endif
-
-
-                                </ul>
-                            </div>
+                         
                         </div>
                         <!-- /.col (LEFT) -->
 
-                        <div class="col-md-9 col-sm-8">
+                        <div class="col-md-12 col-sm-12">
 
 
                             <!---search-->
                             <div class="row pad">
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
 
                                     <!-- Action button -->
 
 
                                 </div>
-                                <div class="col-sm-6 search-form">
-
-                                        {{ Form::open(array('url' => 'search','class' => 'text-right')) }}
-                                        <div class="input-group">
-                                            <input type="text" placeholder="Search" name="search" class="form-control input-sm">
-
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-sm btn-primary" name="q" type="submit">
-
-                                                    <i class="fa fa-search"></i></button>
-                                            </div>
-
-
-                                        </div>
-                                    {{ Form::close()}}
-                                </div>
+                         
                             </div>
                             <!---search end-->
 
 
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">Adress Phone List </h3>
+                                    <h3 class="box-title">Adress Category List </h3>
 
 
                                 </div>
@@ -84,28 +55,26 @@
                                         <tbody>
                                         <tr>
 
-                                            <th>Name /Last Name</th>
+                                            <th>Name </th>
 
-                                            <th>Phone</th>
-                                            <th>Email</th>
+                                     
                                             <th style="width: 40px">Actions</th>
                                         </tr>
                                         <tr>
-                                            @if($adress->count())
-                                            @foreach($adress as $r)
+                                             @if($AdressCat->count())
+                                    @foreach($AdressCat as $cat)
 
 
-                                            <td> {{  $r->name }} {{ ucwords($r->lastname)}}</td>
-                                            <td>{{  $r->phone }}</td>
-                                            <td> {{  $r->email }} </td>
+                                            <td> {{  $cat->name }} </td>
+                                   
 
                                        
                                             <td>
                                                 <div class="tools">
-                                                    <a href="/phonebook/{{  $r->id }}/edit" class="fa fa-edit"></a>
+                                                    <a href="/category/{{  $cat->id }}/edit" class="fa fa-edit"></a>
 
 
-                                                    {{ Form::open(array('method' => 'DELETE','id' => 'form-add-a-option', 'route' => array('phonebook.destroy', $r->id))) }}
+                                                    {{ Form::open(array('method' => 'DELETE','id' => 'form-add-a-option', 'route' => array('category.destroy', $cat->id))) }}
 
                                                     <button  type="submit" title="delete" class="btn btn-primary btn-xs fa fa-trash-o"><i class="fa fa-times"></i></button>
                                                     {{ Form::close() }}
@@ -128,8 +97,8 @@
 
                                 <!-- /.box-body -->
                             </div>
-                            {{ $adress->links()}}
-                   
+                            {{ $AdressCat->links()}}
+                         
                         </div>
                         <!--stnc son -->
 
@@ -158,5 +127,9 @@
     <!-- MAILBOX END -->
 
 </section><!-- /.content -->
+
+
+
+
 
 @stop

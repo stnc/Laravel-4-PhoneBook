@@ -18,6 +18,11 @@ Route::get('/', function () {
     return View::make('home.index')->with( array('adress' => $adress,'AdressCat' => $adressCat  ));
 });
 
+
+
+
+
+
 //Route::get('/', 'HomeController@index'); //example
 
 
@@ -39,4 +44,5 @@ Route::group(array('before' => 'auth'), function () {
   //  Route::get('phonebook', 'PhoneBookController@index');
     Route::get('phonebook/cat/{id}','PhoneBookController@cat');
     Route::resource('phonebook', "PhoneBookController");
+    Route::resource('category', "categoryController");
 });

@@ -16,9 +16,9 @@
 
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
-        <li><a href="/"> <i class="fa fa-dashboard"></i> <span>HomePage</span>
-            </a>
-        </li>
+        <li><a href="/"> <i class="fa fa-dashboard"></i> <span>HomePage</span></a> </li>
+
+
 
 
         <li class="treeview"><a href="/phonebook"> <i class="fa fa-table"></i> <span>PhoneBook</span> <i
@@ -29,6 +29,13 @@
                         Adress list</a></li>
                 <li><a href="/phonebook/create"><i class="fa fa-angle-double-right"></i>
                         Adress Add</a></li>
+						
+						 <li><a href="/category"><i class="fa fa-angle-double-right"></i>
+                        Category List</a></li>
+						
+						    <li><a href="/category/crate"><i class="fa fa-angle-double-right"></i>
+                        Category Add</a></li>
+						
                 <li><a href="/logout"><i class="fa fa-angle-double-right"></i>
                         Logout</a></li>
             </ul>
