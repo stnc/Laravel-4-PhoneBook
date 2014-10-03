@@ -17,9 +17,7 @@
                     <h3 class="box-title">Edit Adress </h3>
                 </div>
 
-
            	{{ Form::model($phonebook, array('method' => 'PATCH', 'route' => array('phonebook.update', $phonebook->id))) }}
-			
 		
                 @if($errors->any())
                 <div class="alert alert-danger alert-dismissable">
@@ -30,24 +28,34 @@
                 @endif
                     <div class="box-body">
 
+					    <div class="form-group @if ($errors->has('category_id')) has-error @endif">
+                            <label for="category_id">Kategori</label>
+					<select name="category_id" class="form-control">
+						@foreach($AdressCat as $a)
+						   @if($a->id == $phonebook->category_id)
+						   <option selected="selected" value="{{ $a->id }}">{{ $a->name }}</option>
+						   @else
+						  <option value="{{ $a->id }}">{{ $a->name }}</option>
+						   @endif
+						@endforeach
+					</select>
+                        </div>
+
+						
 
                         <div class="form-group @if ($errors->has('name')) has-error @endif">
                             <label for="name">Name</label>
-                     
-							
 							{{ Form::text('name', Input::old('name'), array('class' => 'form-control', 'placeholder' => 'Please insert your name here...')) }}
-							
                             @if ($errors->has('name')) <p class="help-block">{{ $errors->first('name') }}</p> @endif
                         </div>
 
-
-
-                        <div class="form-group @if ($errors->has('lastname')) has-error @endif">
+						<div class="form-group @if ($errors->has('lastname')) has-error @endif">
                             <label for="lastname">Last Name</label>
                         {{ Form::text('lastname', Input::old('lastname'), array('class' => 'form-control')) }}
                             @if ($errors->has('name')) <p class="help-block">{{ $errors->first('lastname') }}</p> @endif
                         </div>
 
+                    
 
 
                         <div class="form-group @if ($errors->has('phone')) has-error @endif">

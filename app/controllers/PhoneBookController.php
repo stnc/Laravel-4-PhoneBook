@@ -60,7 +60,10 @@ class PhoneBookController extends BaseController
      */
     public function create()
     {
-        return View::make('phonebook.create');
+	
+		$adressCat = categoryadress::all();
+        return View::make('phonebook.create')->with(array( 'AdressCat' => $adressCat));
+       
     }
 
     /**
@@ -97,14 +100,15 @@ class PhoneBookController extends BaseController
             // let him enter the database
 
             // create the
-            $post = new Phonebook();
-            $post->name = Input::get('name');
-            $post->lastname = Input::get('lastname');
-            $post->phone = Input::get('phone');
-            $post->email = Input::get('email');
-            $post->notes = Input::get('notes');
-            $post->user_id = Auth::user()->id;
-            $post->save();
+            $phone = new Phonebook();
+            $phone->name = Input::get('name');
+            $phone->lastname = Input::get('lastname');
+            $phone->phone = Input::get('phone');
+            $phone->email = Input::get('email');
+            $phone->notes = Input::get('notes');
+			$phone->category_id = Input::get('category_id');
+            $phone->user_id = Auth::user()->id;
+            $phone->save();
 
             return Redirect::route('phonebook.index');
 
@@ -124,8 +128,9 @@ class PhoneBookController extends BaseController
      */
     public function edit($id)
     {
-        Input::flash(); //for -- input old message
+		Input::flash(); //for -- input old message
         $phonebook = Phonebook::find($id);
+		
        /* $queries = DB::getQueryLog();
         var_dump($queries);
         die;*/
@@ -133,7 +138,8 @@ class PhoneBookController extends BaseController
             return Redirect::route('phonebook.index');
         }
 
-        return View::make('phonebook.edit')->with('phonebook', $phonebook);
+		$adressCat = categoryadress::all();
+        return View::make('phonebook.edit')->with(array('phonebook'=> $phonebook, 'AdressCat' => $adressCat));
     }
 
     /**

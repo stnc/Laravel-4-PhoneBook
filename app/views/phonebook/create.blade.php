@@ -29,6 +29,17 @@
                 @endif
                     <div class="box-body">
 
+					    <div class="form-group @if ($errors->has('category_id')) has-error @endif">
+                            <label for="category_id">Kategori</label>
+					<select name="category_id"  class="form-control">
+					   <option selected="selected" value="">Please select</option>
+						@foreach($AdressCat as $a)
+						  <option value="{{ $a->id }}">{{ $a->name }}</option>
+						@endforeach
+					</select>
+                        </div>
+
+						
 
                         <div class="form-group @if ($errors->has('name')) has-error @endif">
                             <label for="name">Name</label>
