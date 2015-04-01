@@ -27,5 +27,4 @@ database seed
 özelleştirilmiş hatalar ve doğrulama uyarıları gibi 
 laravel hakkında bir çok şeyi öğrenebileceğiniz bir uygulama oldu.
 
-<img src="http://1.downloader.disk.yandex.com.tr/preview/410bede0f2e50a0edbc083eaf5c9a488e77c613
-7840a4eb2fddc81ea66362b61/inf/WjAdVrSWL5DBHiflnx-oSVzZaBRvpi1bdrg3bR6WeL-utfLGPcvdj0OswGETk1XaGgBEHUfLeE2gZgH_dlvP7w%3D%3D?uid=0&filename=r1png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=XXL&crop=0">
+<img scr ="http://1.downloader.disk.yandex.com.tr/preview/410bede0f2e50a0edbc083eaf5c9a488e77c6137840a4eb2fddc81ea66362b61/inf/WjAdVrSWL5DBHiflnx-oSVzZaBRvpi1bdrg3bR6WeL-utfLGPcvdj0OswGETk1XaGgBEHUfLeE2gZgH_dlvP7w%3D%3D?uid=0&filename=r1png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=XXL&crop=0">"
