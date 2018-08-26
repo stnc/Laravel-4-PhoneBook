@@ -32,8 +32,9 @@ database seed
 <br>
 laravel hakkında bir çok şeyi öğrenebileceğiniz bir uygulama oldu.
 <br>
-<img  src="http://1.downloader.disk.yandex.com.tr/preview/410bede0f2e50a0edbc083eaf5c9a488e77c6137840a4eb2fddc81ea66362b61/inf/WjAdVrSWL5DBHiflnx-oSVzZaBRvpi1bdrg3bR6WeL-utfLGPcvdj0OswGETk1XaGgBEHUfLeE2gZgH_dlvP7w%3D%3D?uid=0&filename=r1png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=XXL&crop=0">
+<img  src="https://raw.githubusercontent.com/stnc/Laravel-PhoneBook/master/r1.png">
+<img  src="https://raw.githubusercontent.com/stnc/Laravel-PhoneBook/master/r2.png">
+<img  src="https://raw.githubusercontent.com/stnc/Laravel-PhoneBook/master/r3.png">
 
 
-<img  src="https://leto24e.storage.yandex.net/rdisk/4f9a0da2134a46a468cfb44af3db8b572876d12aa092b16401ff023efb3a0972/inf/OHblwSVrboPA4aaSF7rGhS_xIKkEHDQj2-HYbsxlDOPDcZ5PAd2M5R3i2IoYQGpMWrAE_k_u-h7wYMjh_R6DdA==?uid=0&filename=r2.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&rtoken=876553fcd08c3e4d9acc94b407c85688&force_default=no">
 
